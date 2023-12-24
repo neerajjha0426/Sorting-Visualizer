@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Sorting Visualizer</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Heading  -->
+    <div class="head">
+      <p>Sorting Visualizer</p>
+    </div>
+    <!-- Containers -->
+    <div class="container">
+      <!-- Input Container  -->
+      <div class="input-container">
+        <div class="input" id="size">
+          <p>Size of Array</p>
+          <input
+            id="a_size"
+            type="range"
+            min="20"
+            max="150"
+            step="1"
+            value="80"
+          />
+        </div>
+        <div class="input" id="speed">
+          <p>Speed of Algorithm</p>
+          <input
+            type="range"
+            id="a_speed"
+            type="range"
+            min="1"
+            max="5"
+            step="1"
+            value="4"
+          />
+        </div>
+        <!-- Result Container  -->
+        <div class="result-container">
+          <p>Time Complexities</p>
+          <div class="complexity" id="time-complexity">
+            <div class="case" id="best-case">
+              Best Case :
+              <p id="Time_Best"></p>
+            </div>
+            <div class="case" id="wrost-case">
+              Wrost Case :
+              <p id="Time_Worst"></p>
+            </div>
+            <div class="case" id="Average-case">
+              Average Case :
+              <p id="Time_Average"></p>
+            </div>
+            <div class="case" id="time">
+              Time :
+              <p id="Time-diff"></p>
+            </div>
+          </div>
+          <div class="case" id="space-complexity">
+            Space Complexity :
+            <p id="Space_Worst"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Visualiztion Container  -->
+      <div class="main-container">
+        <div class="sorting-algo" id="algo">
+          <button id="sort">Bubble</button>
+          <button id="sort">Selection</button>
+          <button id="sort">Insertion</button>
+          <button id="sort">Merge</button>
+          <button id="sort">Quick</button>
+          <button id="sort">Heap</button>
+        </div>
+        <div class="array" id="generate">
+          <p id="generating">Generate New Array</p>
+          <p id="last-array">Last Array</p>
+        </div>
+        <!-- Acutal Array Container  -->
+        <div class="visual-container" id="array_container"></div>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/visualizations.js"></script>
+    <script src="/js/bubble_sort.js"></script>
+    <script src="/js/selection_sort.js"></script>
+    <script src="/js/insertion_sort.js"></script>
+    <script src="/js/merge_sort.js"></script>
+    <script src="/js/quick_sort.js"></script>
+    <script src="/js/heap_sort.js"></script>
+  </body>
+</html>
